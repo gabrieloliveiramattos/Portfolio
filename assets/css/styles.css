@@ -7,7 +7,7 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+    --hue-color: 255; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
     --first-color: hsl(var(--hue-color), 69%, 61%);
@@ -86,12 +86,13 @@ body.dark-theme{
 .nav__btns{
   display: flex;
   align-items: center;
+  column-gap: .5rem;
 }
 
 .change-theme{
   font-size: 1.25rem;
   color: var(--title-color);
-  margin-right: var(--mb-1);
+  margin-left: var(--mb-1);
   cursor: pointer;
 }
 
@@ -206,6 +207,27 @@ img {
   color: var(--first-color);
 }
 
+.change__color{
+  width: 1.5em;
+  height: 1.5rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.change__color::-webkit-color-swatch{
+  border-radius: 50%;
+  border: none;
+}
+
+.change__color::-moz-color-swatch{
+  border-radius: 50%;
+  border: none;
+}
+
 @media screen and (max-width: 767px) {
   .nav__menu{
     position: fixed;
@@ -217,6 +239,26 @@ img {
     box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
     border-radius: 1.5rem 1.5rem 0 0;
     transition: .3s;
+  }
+
+  .change__color{
+    width: 1.5em;
+    height: 1.5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: var(--body-color) !important;
+  }
+  .change__color::-webkit-color-swatch{
+    border-radius: 50%;
+    border: none;
+  }
+  .change__color::-moz-color-swatch{
+    border-radius: 50%;
+    border: none;
   }
 }
 
@@ -524,7 +566,7 @@ img {
 }
 
 .skills__php{
-  width: 80%;
+  width: 90%;
 }
 
 .skills__node{
